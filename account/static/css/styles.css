@@ -1,0 +1,301 @@
+/* body*/
+body {
+    background-color: #fff;
+}
+
+/* table */
+.time-column {
+    width: calc(100% / 11);
+    background-color: #1d2228 !important;
+    color: #fff !important;
+    border-left: 1px solid #fff;
+}
+
+.time-separator {
+    background-color: #E1E2E2 !important;
+    color: #1d2228 !important;
+    border-left: 1px solid #1d2228;
+}
+
+.days {
+    background-color: #fb8122 !important;
+    color: #1d2228 !important;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #1d2228 !important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='black'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-prev {
+    left: -105px;
+}
+
+.carousel-control-next {
+    right: -105px;
+}
+
+/* alert */
+.custom-text {
+    color: red;
+    background-color: white;
+    vertical-align: middle;
+}
+
+/* logo */
+.custom-logo {
+    height: 50px;
+}
+
+/* navbar */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: #1d2228;
+}
+
+.navbar-nav {
+    display: flex;
+    width: 100%
+        /* align-items: center; */
+}
+
+.nav-item {
+    /* flex: 1; */
+    margin-right: 30px;
+}
+
+.navbar-custom {
+    background: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure navbar is on top */
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Navbar logo */
+.navbar-brand {
+    margin-right: auto;
+}
+
+
+.navbar-nav .nav-link {
+    /* font-weight: bold; */
+    font-family: 'Poppins';
+    font-size: medium;
+    color: #E1E2E2;
+    text-align: center;
+    position: relative;
+    margin-right: 10px !important;
+    margin-left: 20px !important;
+}
+
+/* Navbar options hover */
+.navbar-nav .nav-link:hover{
+    color: #fb8122;
+}
+
+/* Underline animation */
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #E1E2E2;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+    /* Expand the underline on hover */
+}
+
+/* cover image */
+.cover-image {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+}
+
+/* .container-fluid{
+    padding:0px !important
+} */
+
+.cover-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+/* -----------------------FIRST PAGE----------------------- */
+
+.custom-button {
+    background-color: black;
+    color: white;
+    /* Optional: Set the text color to white for better visibility */
+    height: 30px;
+    width: 30px;
+    /* Adjust the font size to fit the emoji within the 4px height */
+    border: none;
+    /* Remove the default button border */
+    padding: 0;
+    /* Remove default padding */
+    font-size: small;
+    cursor: pointer;
+    /* Change the cursor to a pointer when hovering over the button */
+}
+
+table,
+tr,
+td,
+th {
+    border: 1px solid black;
+}
+
+th {
+    text-align: center;
+}
+
+/* .delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #E1E2E2;
+} */
+
+/* cards */
+.small-box {
+    border-radius: 0.25rem;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin-bottom: 30px;
+    position: relative;
+    width: 80%;
+    margin: 30px auto;
+  }
+  
+  .small-box > .inner {
+    padding: 20px;
+  }
+
+  
+  .small-box h3 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+    padding: 0;
+    white-space: nowrap;
+  }
+  
+  @media (min-width: 992px) {
+    .col-xl-2 .small-box h3,
+    .col-lg-2 .small-box h3,
+    .col-md-2 .small-box h3 {
+      font-size: 1.6rem;
+    }
+    .col-xl-3 .small-box h3,
+    .col-lg-3 .small-box h3,
+    .col-md-3 .small-box h3 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .col-xl-2 .small-box h3,
+    .col-lg-2 .small-box h3,
+    .col-md-2 .small-box h3 {
+      font-size: 2.2rem;
+    }
+    .col-xl-3 .small-box h3,
+    .col-lg-3 .small-box h3,
+    .col-md-3 .small-box h3 {
+      font-size: 2.2rem;
+    }
+  }
+  
+  .small-box p {
+    font-size: 1rem;
+  }
+  
+  .small-box p > small {
+    color: #f8f9fa;
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  .small-box h3,
+  .small-box p {
+    z-index: 5;
+  }
+  
+  .small-box .icon {
+    color: rgba(0, 0, 0, 0.15);
+    z-index: 0;
+  }
+  
+  .small-box .icon > i {
+    font-size: 90px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    transition: all 0.3s linear;
+  }
+  
+  .small-box .icon > i.fa, .small-box .icon > i.fas, .small-box .icon > i.far, .small-box .icon > i.fab, .small-box .icon > i.glyphicon, .small-box .icon > i.ion {
+    font-size: 70px;
+    top: 20px;
+  }
+  
+  .small-box:hover {
+    text-decoration: none;
+  }
+  
+  .small-box:hover .icon > i {
+    font-size: 95px;
+  }
+  
+  .small-box:hover .icon > i.fa, .small-box:hover .icon > i.fas, .small-box:hover .icon > i.far, .small-box:hover .icon > i.fab, .small-box:hover .icon > i.glyphicon, .small-box:hover .icon > i.ion {
+    font-size: 75px;
+  }
+  
+  @media (max-width: 767.98px) {
+    .small-box {
+      text-align: center;
+    }
+    .small-box .icon {
+      display: none;
+    }
+    .small-box p {
+      font-size: 12px;
+    }
+  }
