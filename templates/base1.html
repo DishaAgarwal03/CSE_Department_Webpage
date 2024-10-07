@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,  
+                       initial-scale=1, 
+                       shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- Google Font Anton-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+
+  <title>Bootstrap Form</title>
+  <style>
+    body {
+      background-image: url('{% static "images/background_img.jpg"%}');
+      /* background-color: #1D2228; */
+      background-size: cover;
+      /* Cover the entire background */
+      background-position: center;
+      /* Center the background image */
+      height: 150vh;
+      /* Make sure the background covers the entire viewport height */
+      font-family: "Roboto", sans-serif;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      /* Make the buttons span the entire width */
+      background-color: #FB8122;
+    }
+
+    .anton-regular {
+      font-family: "Anton", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .required::after {
+      content: '*';
+      /* Use asterisk as content */
+      color: rgb(192, 4, 4);
+      /* Set color to red */
+      font-size: smaller;
+      /* Decrease font size */
+      vertical-align: super;
+      /* Set vertical alignment to superscript */
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div class="container mt-5 ">
+    <h1 class="text-light text-center mt-5 anton-regular" style="font-size:600%;">
+      <strong>Welcome</strong>
+    </h1>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body p-5">
+            {% block body %}
+
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

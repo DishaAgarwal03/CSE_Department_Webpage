@@ -1,0 +1,230 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+<div>HOME PAGE</div>
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid" style="background-color:#0e1114;">
+    <div class="row">
+        <!-- First Column -->
+        <div class="col-4"><br><br>
+            <h3 class="text-center text-light"><strong>COURSES</strong></h3><br>
+            <!-- <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter text">
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form> -->
+            <!-- <div class="card" style="border: none;"> -->
+            <div class="p-4 pt-2 m-3 mt-1">
+                {% if is_admin_perm %}
+                <form method="post" action="{% url 'add_course' %}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-6">
+                            <input type="text" class="form-control" placeholder="Course Name" name="cname"
+                                aria-label="cname">
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control" placeholder="Code" name="c_code"
+                                aria-label="c_code">
+                        </div>
+                        <div class="col-3">
+                            <input type="text" class="form-control" placeholder="Credits" name="cred" aria-label="cred">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn mt-1 mb-3" type="submit"
+                                style="background-color: #E1E2E2;width:100%"><strong>ADD</strong></button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                {% endif %}
+                <!-- <ol>
+                    {% for x in Courses %}
+                    <li>{{ x.cname }} {{ x.c_code }} {{ x.cred }}<button class="custom-button">🗑</button></li>
+                    {% endfor %}
+                </ol> -->
+                <ul class="list-group">
+                    <li class="list-group-item" style="background-color: #f9a959ee;">
+                        <strong>
+                            <div class="row">
+                                <div class="col-sm-5">Name</div>
+                                <div class="col-sm-3">Code</div>
+                                <div class="col-sm-2">Credits</div>
+                                {% if is_admin_perm %}<div class="col-sm-1">Delete</div>{% endif %}
+                            </div>
+                        </strong>
+                    </li>
+
+                    {% for pub in Courses %}
+                    <li class="list-group-item" style="background-color: #f4d3b2eb;">
+                        <div class="row">
+                            <div class="col-sm-5">{{ pub.cname }}</div>
+                            <div class="col-sm-3">{{ pub.c_code }}</div>
+                            <div class="col-sm-2">{{ pub.cred }}</div>
+                            {% if is_admin_perm %}
+                            <div class="col-sm-1">
+                                <form method="post" action="{% url 'delete_course' pub.id %}">
+                                    {% csrf_token %}
+                                    <button class="btn" type="submit"><i class="fa fa-trash"></i></button>
+                                </form>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% endfor %}
+            </div>
+            <!-- </div> -->
+        </div>
+
+        <!-- Second Column -->
+        <div class="col-5">
+            <br><br>
+            <h3 class="text-center text-light"><strong>DEPARTMENT PUBLICATIONS</strong></h3><br>
+            <!-- <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter text">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </form> -->
+            <div class="p-5 pt-2">
+                {% if is_admin_perm or is_teacher_perm %}
+                <form method="post" action="{% url 'add_pub' %}">
+                    {% csrf_token %}
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Title" name="pub_title" required
+                                aria-label="pub_title">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Topic" name="topic" aria-label="topic"
+                                required>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Author" name="auth" aria-label="auth"
+                                required>
+                        </div>
+                        <div class="col">
+                            <input type="date" class="form-control" placeholder="Publication Date" name="pub_date"
+                                aria-label="pub_date" id="pub_date" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn mt-2 mb-3" type="submit"
+                                style="background-color: #fb8122;width:100%"><strong>ADD</strong></button>
+                        </div>
+                    </div>
+                </form>
+                <br>
+                {% endif %}
+                <ul class="list-group text-center">
+                    <li class="list-group-item list-group-item-dark">
+                        <strong>
+                            <div class="row">
+                                <div class="col-sm-3">Title</div>
+                                <div class="col-sm-2">Topic</div>
+                                <div class="col-sm-3">Published Date</div>
+                                <div class="col-sm-2">Author</div>
+                                {% if is_admin_perm %}<div class="col-sm-1">Delete</div>{% endif %}
+                            </div>
+                        </strong>
+                    </li>
+
+                    <!-- <thead class="thead-light">
+                        <tr>
+                            <th>Publication Title</th>
+                            <th>Topic</th>
+                            <th>Published Date</th>
+                            <th>Author</th>
+                             if is_admin_perm 
+                            <th>Delete</th>
+                             endif 
+                        </tr>
+                    </thead> -->
+
+                    {% for pub in Pubs %}
+                    <li class="list-group-item list-group-item-light">
+                        <div class="row">
+                            <div class="col-sm-3">{{ pub.pub_title }}</div>
+                            <div class="col-sm-2">{{ pub.topic }}</div>
+                            <div class="col-sm-3">{{ pub.pub_date }}</div>
+                            <div class="col-sm-2">{{ pub.auth }}</div>
+                            {% if is_admin_perm %}
+                            <div class="col-sm-1">
+                                <form method="post" action="{% url 'delete_pub' pub.id %}">
+                                    {% csrf_token %}
+                                    <button class="btn" type="submit"><i class="fa fa-trash"></i></button>
+                                </form>
+                            </div>
+                            {% endif %}
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+
+        </div>
+
+        <!-- Third Column -->
+        <div class="col-3">
+            <br><br>
+            <h3 class="text-center text-light"><strong>STATISTICS</strong></h3>
+            <div class="small-box" style="background-color: #fb8122">
+                <div class="inner">
+                    <h3>{{num_students}}</h3>
+                    <p>Students</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-user-graduate"></i>
+                </div>
+            </div>
+            <div class="small-box" style="background-color: #f9a959;">
+                <div class="inner">
+                    <h3>{{num_teachers}}</h3>
+                    <p>Professors</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-users"></i>
+                </div>
+            </div>
+            <div class="small-box" style="background-color: #f7ce90;">
+                <div class="inner">
+                    <h3>{{Branches}}</h3>
+                    <p>Branches</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-th-list"></i>
+                </div>
+            </div>
+            <div class="small-box" style="background-color: #f9a959;">
+                <div class="inner">
+                    <h3>{{num_courses}}</h3>
+                    <p>Courses</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-book"></i>
+                </div>
+            </div>
+            <div class="small-box" style="background-color: #fb8122;">
+                <div class="inner">
+                    <h3>{{num_pubs}}</h3>
+                    <p>Publications</p>
+                </div>
+                <div class="icon">
+                    <i class="nav-icon fas fa-newspaper"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,1068 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+<div>TIMETABLE</div>
+{% endblock %}
+
+{% block body %}
+
+    <br>
+    <div class="row m-3">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">CSE-A</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">DS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FLAT</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSD</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">FLAT</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">COA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSD</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">COA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSD</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">CD</td>
+                                <td class="time-separator">OS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FLAT</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">CN</td>
+                                <td class="time-separator">OS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FLAT</td>
+                                <td class="time-separator">CD</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">COA</td>
+                                <td class="time-separator">FLAT</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">CN</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">CD</td>
+                                <td class="time-separator">COA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="carousel-item">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">CSE-B</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">OS</td>
+                                <td class="time-separator">CN</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">CD</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">COA</td>
+                                <td class="time-separator">DSD</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DS</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">CN</td>
+                                <td class="time-separator">OS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">CD</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EEFM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">SE</td>
+                                <td class="time-separator">DS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OE</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">OE</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">CN</td>
+                                <td class="time-separator">CD</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OS</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EEFM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">DS</td>
+                                <td class="time-separator">SE</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">CD</td>
+                                <td class="time-separator">OE</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">OS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row m-3">
+        <div id="carouselExample2" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">AI-ML:A</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DAA</td>
+                                <td class="time-separator">BDA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ML</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">EOM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">DL</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EOM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">BDA</td>
+                                <td class="time-separator">DL</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EOM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">DSD</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DL</td>
+                                <td class="time-separator">BDA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DBMS</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="carousel-item">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">AI-ML:B</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">DSD</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">EOM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">BDA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">DL</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">EOM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DSD</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">BDA</td>
+                                <td class="time-separator">EOM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ML</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSD</td>
+                                <td class="time-separator">EOM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">DSD</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">BDA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">PCAP</td>
+                                <td class="time-separator">ML</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DL</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="row m-3">
+        <div id="carouselExample3" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">FINTECH-A</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MATHS</td>
+                                <td class="time-separator">FINANCIAL ACCOUNTING</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ECONOMICS</td>
+                                <td class="time-separator">BUSINESS COMMUNICATION</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">INTRODUCTION TO FINTECH</td>
+                                <td class="time-separator">BLOCKCHAIN TECHNOLOGY</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MANAGEMENT</td>
+                                <td class="time-separator">RISK MANAGEMENT</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">INVESTMENT BANKING</td>
+                                <td class="time-separator">FINANCIAL ANALYSIS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MARKEITNG</td>
+                                <td class="time-separator">QUANTITATIVE ANALYSIS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ALGORITHMIC TRAINING</td>
+                                <td class="time-separator">FINANCIAL TECHNOLOGY</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BEHAVIOURAL FINANCE</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EOM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL DERIVATIVES</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MODELLING</td>
+                                <td class="time-separator">ALGORITHMIC FINANCE</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL TECHNOLOGY</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EOM</td>
+                                <td class="time-separator">DIGITAL BANKING</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DBMS</td>
+                            </tr>
+                        </tbody>
+                        
+                    </table>
+                </div>
+                <div class="carousel-item">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">FINTECH-B</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL TECHNOLOGY</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EOM</td>
+                                <td class="time-separator">DIGITAL BANKING</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DBMS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">EEFM</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL DERIVATIVES</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MODELLING</td>
+                                <td class="time-separator">ALGORITHMIC FINANCE</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ALGORITHMIC TRAINING</td>
+                                <td class="time-separator">FINANCIAL TECHNOLOGY</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BEHAVIOURAL FINANCE</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">EOM</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">INVESTMENT BANKING</td>
+                                <td class="time-separator">FINANCIAL ANALYSIS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MARKEITNG</td>
+                                <td class="time-separator">QUANTITATIVE ANALYSIS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">DSA</td>
+                                <td class="time-separator">OOPS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">INTRODUCTION TO FINTECH</td>
+                                <td class="time-separator">BLOCKCHAIN TECHNOLOGY</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MANAGEMENT</td>
+                                <td class="time-separator">RISK MANAGEMENT</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">MATHS</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">MATHS</td>
+                                <td class="time-separator">DBMS</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">FINANCIAL MATHS</td>
+                                <td class="time-separator">FINANCIAL ACCOUNTING</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">ECONOMICS</td>
+                                <td class="time-separator">BUSINESS COMMUNICATION</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">DSA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <!-- <br>
+    <div class="row m-3">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">CSE A</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">Math</td>
+                                <td class="time-separator">Physics</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Chemistry</td>
+                                <td class="time-separator">Biology</td>
+                                <td class="time-separator">Geography</td>
+                                <td class="time-separator">History</td>
+                                <td class="time-separator">English</td>
+                                <td class="time-separator">Music</td>
+                                <td class="time-separator">Art</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">Gym</td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Dance</td>
+                                <td class="time-separator">Basketball</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Football</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Tennis</td>
+                                <td class="time-separator">Volleyball</td>
+                                <td class="time-separator">Cricket</td>
+                                <td class="time-separator">Hockey</td>
+                                <td class="time-separator">Badminton</td>
+                                <td class="time-separator">Baseball</td>
+                                <td class="time-separator">Softball</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Programming</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Computer Science</td>
+                                <td class="time-separator">Hiking</td>
+                                <td class="time-separator">Rock Climbing</td>
+                                <td class="time-separator">Soccer</td>
+                                <td class="time-separator">Rugby</td>
+                                <td class="time-separator">Golf</td>
+                                <td class="time-separator">Fencing</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Second Language</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Foreign Language</td>
+                                <td class="time-separator">Elective</td>
+                                <td class="time-separator">Health Education</td>
+                                <td class="time-separator">Physical Education</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Yoga</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Gymnastics</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Dancing</td>
+                                <td class="time-separator">Yoga</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="carousel-item">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">CSE B</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">History</td>
+                                <td class="time-separator">Geography</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">English</td>
+                                <td class="time-separator">Music</td>
+                                <td class="time-separator">Art</td>
+                                <td class="time-separator">Math</td>
+                                <td class="time-separator">Physics</td>
+                                <td class="time-separator">Chemistry</td>
+                                <td class="time-separator">Biology</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Dance</td>
+                                <td class="time-separator">Basketball</td>
+                                <td class="time-separator">Gym</td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Jumping</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">Cricket</td>
+                                <td class="time-separator">Hockey</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Badminton</td>
+                                <td class="time-separator">Baseball</td>
+                                <td class="time-separator">Softball</td>
+                                <td class="time-separator">Football</td>
+                                <td class="time-separator">Tennis</td>
+                                <td class="time-separator">Volleyball</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">Rock Climbing</td>
+                                <td class="time-separator">Soccer</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Rugby</td>
+                                <td class="time-separator">Golf</td>
+                                <td class="time-separator">Fencing</td>
+                                <td class="time-separator">Programming</td>
+                                <td class="time-separator">Computer Science</td>
+                                <td class="time-separator">Hiking</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">Physical Education</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Second Language</td>
+                                <td class="time-separator">Foreign Language</td>
+                                <td class="time-separator">Elective</td>
+                                <td class="time-separator">Health Education</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Dancing</td>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">Gymnastics</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+    <div class="row m-3">
+        <div id="carouselExample2" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">AI-ML:A</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">Math</td>
+                                <td class="time-separator">Physics</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Chemistry</td>
+                                <td class="time-separator">Biology</td>
+                                <td class="time-separator">Geography</td>
+                                <td class="time-separator">History</td>
+                                <td class="time-separator">English</td>
+                                <td class="time-separator">Music</td>
+                                <td class="time-separator">Art</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">Gym</td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Dance</td>
+                                <td class="time-separator">Basketball</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Football</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Tennis</td>
+                                <td class="time-separator">Volleyball</td>
+                                <td class="time-separator">Cricket</td>
+                                <td class="time-separator">Hockey</td>
+                                <td class="time-separator">Badminton</td>
+                                <td class="time-separator">Baseball</td>
+                                <td class="time-separator">Softball</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Programming</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Computer Science</td>
+                                <td class="time-separator">Hiking</td>
+                                <td class="time-separator">Rock Climbing</td>
+                                <td class="time-separator">Soccer</td>
+                                <td class="time-separator">Rugby</td>
+                                <td class="time-separator">Golf</td>
+                                <td class="time-separator">Fencing</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Second Language</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Foreign Language</td>
+                                <td class="time-separator">Elective</td>
+                                <td class="time-separator">Health Education</td>
+                                <td class="time-separator">Physical Education</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Yoga</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator"></td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Gymnastics</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Dancing</td>
+                                <td class="time-separator">Yoga</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="carousel-item">
+                    <table class="table table-dark">
+                        <thead>
+                            <tr>
+                                <th scope="col">AI-ML:B</th>
+                                <th scope="col" class="time-column">8-9</th>
+                                <th scope="col" class="time-column">9-10</th>
+                                <th scope="col" class="time-column">10-10.30</th>
+                                <th scope="col" class="time-column">10.30-11.30</th>
+                                <th scope="col" class="time-column">11.30-12.30</th>
+                                <th scope="col" class="time-column">12.30-1</th>
+                                <th scope="col" class="time-column">1-2</th>
+                                <th scope="col" class="time-column">2-3</th>
+                                <th scope="col" class="time-column">3-3.30</th>
+                                <th scope="col" class="time-column">3.30-4.30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="days">Monday</th>
+                                <td class="time-separator">History</td>
+                                <td class="time-separator">Geography</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">English</td>
+                                <td class="time-separator">Music</td>
+                                <td class="time-separator">Art</td>
+                                <td class="time-separator">Math</td>
+                                <td class="time-separator">Physics</td>
+                                <td class="time-separator">Chemistry</td>
+                                <td class="time-separator">Biology</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Tuesday</th>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Dance</td>
+                                <td class="time-separator">Basketball</td>
+                                <td class="time-separator">Gym</td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">Jumping</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Wednesday</th>
+                                <td class="time-separator">Cricket</td>
+                                <td class="time-separator">Hockey</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Badminton</td>
+                                <td class="time-separator">Baseball</td>
+                                <td class="time-separator">Softball</td>
+                                <td class="time-separator">Football</td>
+                                <td class="time-separator">Tennis</td>
+                                <td class="time-separator">Volleyball</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Thursday</th>
+                                <td class="time-separator">Rock Climbing</td>
+                                <td class="time-separator">Soccer</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Rugby</td>
+                                <td class="time-separator">Golf</td>
+                                <td class="time-separator">Fencing</td>
+                                <td class="time-separator">Programming</td>
+                                <td class="time-separator">Computer Science</td>
+                                <td class="time-separator">Hiking</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Friday</th>
+                                <td class="time-separator">Physical Education</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Second Language</td>
+                                <td class="time-separator">Foreign Language</td>
+                                <td class="time-separator">Elective</td>
+                                <td class="time-separator">Health Education</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="days">Saturday</th>
+                                <td class="time-separator">Skating</td>
+                                <td class="time-separator">Cycling</td>
+                                <td class="time-separator">BREAK</td>
+                                <td class="time-separator">Jumping</td>
+                                <td class="time-separator">Dancing</td>
+                                <td class="time-separator">Yoga</td>
+                                <td class="time-separator">Swimming</td>
+                                <td class="time-separator">Gymnastics</td>
+                                <td class="time-separator">Running</td>
+                                <td class="time-separator"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+
+     -->
